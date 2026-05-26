@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@500&display=swap');
+
+        body {
+            font-family: 'Rajdhani', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #0d0221;
+            background-image: 
+                linear-gradient(rgba(13, 2, 33, 0.8), rgba(13, 2, 33, 0.8)),
+                repeating-linear-gradient(0deg, transparent, transparent 39px, rgba(255, 0, 255, 0.1) 40px),
+                repeating-linear-gradient(90deg, transparent, transparent 39px, rgba(255, 0, 255, 0.1) 40px);
+            color: #e0e0e0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #1a1a2e;
+            color: #00ffff;
+            padding: 2rem;
+            text-align: center;
+            border-bottom: 3px solid #ff00ff;
+            box-shadow: 0 0 20px #ff00ff;
+        }
+
+        h1 {
+            font-family: 'Orbitron', sans-serif;
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            text-shadow: 0 0 5px #00ffff, 0 0 15px #00ffff;
+            animation: flicker 2s infinite alternate;
+        }
+
+       nav {
+            background-color: #111;
+            padding: 0.8rem;
+            text-align: center;
+            border-bottom: 1px solid #333;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            font-family: 'Orbitron', sans-serif;
+            color: #00ffff;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.9rem;
+            transition: color 0.3s, text-shadow 0.3s;
+        }
+
+        nav a:hover {
+            color: #ff00ff;
+            text-shadow: 0 0 10px #ff00ff;
+        }
+
+        .container {
+            display: flex;
+            flex: 1;
+            padding: 30px;
+            gap: 25px;
+        }
+
+        main {
+            flex: 3;
+            background-color: rgba(26, 26, 46, 0.9);
+            padding: 25px;
+            border-radius: 12px;
+            border: 1px solid #00ffff;
+            box-shadow: inset 0 0 15px rgba(0, 255, 255, 0.2);
+        }
+
+        section {
+            scroll-margin-top: 80px; 
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-family: 'Orbitron', sans-serif;
+            color: #ff00ff;
+            text-shadow: 0 0 8px #ff00ff;
+            border-bottom: 1px solid #ff00ff;
+            padding-bottom: 10px;
+        }
+
+        aside {
+            flex: 1;
+            background-color: rgba(13, 2, 33, 0.95);
+            padding: 20px;
+            border-radius: 12px;
+            border: 2px solid #39ff14;
+            box-shadow: 0 0 15px rgba(57, 255, 20, 0.4);
+        }
+
+        aside h3 {
+            font-family: 'Orbitron', sans-serif;
+            color: #39ff14;
+            text-shadow: 0 0 10px #39ff14;
+            text-align: center;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 15px;
+            padding-left: 10px;
+            border-left: 2px solid #00ffff;
+        }
+
+        li strong {
+            color: #00ffff;
+        }
+
+        footer {
+            background-color: #000;
+            color: #666;
+            text-align: center;
+            padding: 15px;
+            margin-top: auto;
+            border-top: 1px solid #333;
+            font-size: 0.9rem;
+        }
+
+        @keyframes flicker {
+            0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+                text-shadow: 0 0 5px #00ffff, 0 0 15px #00ffff;
+            }
+            20%, 22%, 24%, 55% {
+                text-shadow: none;
+                color: #008b8b;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container { flex-direction: column; }
+        }
